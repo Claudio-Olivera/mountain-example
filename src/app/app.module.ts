@@ -12,6 +12,7 @@ import { RecorridosComponent } from './Pages/recorridos/recorridos.component';
 import { BlogComponent } from './Pages/blog/blog.component';
 import { LoginComponent } from './Auth/login/login.component';
 import { HeaderComponent } from './Common/header/header.component';
+import { RegisterComponent } from './Auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HeaderComponent } from './Common/header/header.component';
     RecorridosComponent,
     BlogComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
