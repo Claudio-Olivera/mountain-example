@@ -1,10 +1,10 @@
-<h2>Actividades</h2>
+<!-- <h2>Actividades</h2>
     <!-- <button class=" btn btn_01 ms-5">Todas</button>
     <button class=" btn btn_01 ms-3">Baja</button>
     <button class=" btn btn_01 ms-3">Moderada</button>
     <button class=" btn btn_01 ms-3">Exigente</button> -->
 
-    <img class="gigantes01" src="../../../assets/img/recorridos/imagen02.jpg" alt="">
+    <!-- <img class="gigantes01" src="../../../assets/img/recorridos/imagen02.jpg" alt="">
     <p class="titulo">Los Gigantes</p>
     <p class="texto">Sendero muy técnico y con zonas de mucho peligro.
       Iniciamos el sendero en la calle S. Pedro En Tamaimo, conectamos con el sendero TF 65 a la izquierda bajando unos
@@ -156,4 +156,18 @@
      </div>
   </div>
     
-    
+     -->
+
+    <span *ngFor="let item of data">
+      <p> {{ item.id }} </p>
+      <h1> {{ item.titulo }} </h1>
+      <p> {{ item.texto }} </p>
+      <img class="gigantes01" src="{{item.image}}" >
+      
+      <span *ngFor="let i of item.recorridos">
+        <h3> {{ i.nombre_recorrido }} </h3>
+        <p> {{ i.texto }} </p>
+        <p> {{ i.dificultad }} </p>
+        <p> {{ i.precio }} </p>
+       </span>
+    </span>
