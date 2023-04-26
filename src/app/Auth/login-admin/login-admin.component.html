@@ -1,0 +1,23 @@
+<form (ngSubmit)="login(username.value, password.value)">
+  <label for="username">Username:</label>
+  <input type="text" id="username" #username>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" #password>
+  <br>
+  <button type="submit">Login</button>
+  <button (click)="logout()">Logout</button>
+</form>
+
+<ul class="list-group p-5 rounded-4">
+  <li class="list-group-item mb-5 " *ngFor="let blog of blogs">
+    <img src="{{blog.imagen}}" class="float-start me-3 rounded-2 sombra" alt="{{blog.titulo}}">
+    <h4 class="mb-3 ">{{blog.titulo}}</h4>
+    <p class="">{{blog.articulo}}</p>
+    <small class="text-muted">{{blog.fecha}}</small>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button type="button" class="btn btn-sm btn-outline-secondary me-md-2" [routerLink]="['/blog', blog.id_blog]">Leer más</button>
+      <button class="btn-danger" (click)="deleteBlog(blog.id_blog)">Delete</button>
+    </div>
+  </li>
+</ul>
